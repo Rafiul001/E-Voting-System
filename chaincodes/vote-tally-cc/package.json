@@ -1,0 +1,35 @@
+{
+  "name": "vot-tally-cc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "lint": "eslint ./src --ext .ts",
+    "pretest": "npm run lint",
+    "test": "echo 'No tests implemented'",
+    "start": "fabric-chaincode-node start",
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "prepublishOnly": "npm run build",
+    "postinstall": "npm dedupe"
+  },
+  "engineStrict": true,
+  "author": "e-voting-system",
+  "license": "ISC",
+  "dependencies": {
+    "fabric-contract-api": "^2.5.8",
+    "fabric-shim": "^2.5.8"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.6",
+    "@types/node": "^24.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.39.1",
+    "@typescript-eslint/parser": "^8.39.1",
+    "eslint": "^9.33.0",
+    "typescript": "^5.9.2"
+  }
+}
